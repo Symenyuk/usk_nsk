@@ -1,0 +1,36 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #9e9fa4;
+    font-size: 13px;
+    margin-top: 10px;
+    @include mobile {
+        @include textTruncate;
+        max-width: 100%
+    }
+    > a {
+        color: #9e9fa4;
+        font-size: 13px;
+        transition: 0.26s;
+        padding: 0 7px;
+        @include mobile {
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+        &:hover, &:focus {
+            color: #636571;
+        }
+    }
+    > span {
+        color: #636571;
+        padding: 0 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

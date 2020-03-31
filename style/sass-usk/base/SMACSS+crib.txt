@@ -1,0 +1,66 @@
+====! base+layout+module+state+theme = SMACSS !=====
+/BASE
+	- 	здесь описывается селекторы тегов и атрибутов
+		(body,input,button,ul,ol...)
+		(классы в исключительных случаях)
+
+	1. _null.scss
+	2. _fonts.scss
+	3. _print.scss (!если нужно)
+	(файлы подключаются в порядке возрастания)
+
+/layout
+	- стили макета (здесь находятся !глобальные стили разметки страницы (header, footer,sidebar, wrap-content)
+
+	1. _header.scss
+	2. _sidebar.scss
+	3. _wrap_content.scss
+	4. _footer.scss
+
+/modules
+	- стили модулей, то есть блоков, могут использоваться несколько раз, не должны ни от чего зависеть 
+	(использовать классы)
+
+/state
+	- стили состояния. Состояние модулей и скелета сайта
+	Только тут можно использовать !important.
+
+/theme
+	- оформления
+
+/utilits
+	- здесь находятся вспомогательные 2 файлы:
+		1. classes
+		2. mixins 
+
+//**************(null-site START:)*****************//
+1. шрифт сайта (основной и второстепенный)
+2. размер и цвет шрифту по умолчанию
+3. background-color
+4. max-width сайту
+
+//******************Font Weight:*******************//
+100-This(Heivline)
+200-Extra Light(Ultra Light)
+300-Light
+400-Normal(Regular)
+500-Medium
+600-SemiBold(DemiBold)
+700-Bold
+800-Extra Bold(Ultra Light)
+900-Black(Heavy)
+
+//******************Box Shadow:*******************//
+0			1px 		5px
+размах% 	смещенияPX  размерPX
+1px 		5px			3px			8px		
+смешПоГориз смешПоВерт  размитие	толщина
+
+
+//******************SASS MAP:*******************//
+$colors: (
+	$primary:  #333,
+	$secondary:#555,
+	$bland:    #ff0033,
+);
+using->: .logo {map-get($colors, bland);}

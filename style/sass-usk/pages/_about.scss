@@ -1,0 +1,21 @@
+.page_about_company {
+    @include mobile {
+        h1 {
+            text-align: center;
+        }
+        img {
+            margin: 0;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+    .ask_question {
+        @include blueButton;
+        max-width: 250px;
+        margin: 35px auto;
+    }
+    .text {
+        margin-top: 10px;
+    }
+}

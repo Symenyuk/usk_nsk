@@ -1,0 +1,12 @@
+.container {
+    max-width: 1200px; //1170px - design (+15x2-1200px)
+    width: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include max1199 {
+        // border: 1px solid red;
+    }
+}
+.no_white {
+    background-color: #f4f6f9;
+}

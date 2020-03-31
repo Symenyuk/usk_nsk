@@ -1,0 +1,102 @@
+#main-slider {
+    background-color: #f4f6f9;
+    padding: 0;
+    max-height: 387px;
+    overflow: hidden;
+    @include mobile {
+        height: 300px;
+    }
+    > .container {
+        @include max1024 {
+            padding: 0;
+        }
+        @include mobile {
+            height: 100%;
+        }
+    }
+}
+.bx-wrapper {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(#000, .22);
+    margin-bottom: 0;
+    @include mobile {
+        height: 100%;
+        .bx-viewport {
+            height: 100% !important;
+            .bxslider {
+                height: 100%;
+                > div {
+                    height: 100%;
+                    > img {
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .descript_text {
+        @include coverBox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        padding: 30px 200px;
+        @include max960 {
+            padding: 25px;
+        }
+        @include mobile {
+            padding: 10px;
+            padding-bottom: 40px;
+        }
+        > .title {
+            font-size: 44px;
+            font-weight: 700;
+            font-style: italic;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 25px 100px;
+            @include max960 {
+                font-size: 36px;
+                padding: 20px;
+            }
+            @include tablet-small {
+                font-size: 30px;
+            }
+            @include mobile {
+                font-size: 24px;
+                padding: 10px;
+            }
+        }
+        > .subtitle {
+            font-size: 24px;
+            font-style: italic;
+            text-align: center;
+            @include max960 {
+                font-size: 22px;
+            }
+            @include tablet-small {
+                font-size: 18px;
+            }
+        }
+    }
+    .bx-pager { // dots
+        bottom: 0;
+        height: 55px;
+        .bx-pager-item {
+            > a {
+                width: 12px;
+                height: 12px;
+                background: #fff;
+                &:hover, &:focus {
+                    background: $orange;
+                }
+                &.active {
+                    background: $orange;
+                }
+            }
+        }
+    }
+}

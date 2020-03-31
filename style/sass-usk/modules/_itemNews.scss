@@ -1,0 +1,20 @@
+.item_news {
+    flex-basis: 30%;
+    .name_news {
+        color: #292929;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    .descript_news {
+        color: #2b2b2b;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .read_more {
+        @include blueButtonTransparent;
+        max-width: 150px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,330 @@
+header {
+    height: 155px;
+    border-top: 4px solid #ff6800;
+    @include max1024 {
+        height: 67px;
+        box-shadow: 0 0 5px rgba(#000, .17);
+    }
+    @include mobile {
+        height: 50px;
+    }
+    .mob_menu_ico {
+        display: none;
+        background: transparent;
+        border: none;
+        height: 100%;
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/mob_menu_ico.png);
+        background-repeat: no-repeat;
+        background-position: center 25px;
+        border-right: 1px solid #eee;
+        @include mobile {
+            width: 50px;
+            background-position: center 17px;
+        }
+        &.open {
+            background-color: #ff6800;
+            background-position: center -22px;
+            @include mobile {
+                background-position: center -30px;
+            }
+        }
+        @include max1024 {
+            display: flex;
+            flex-shrink: 0;
+        }
+    }
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        @include max1024 {
+            padding: 0;
+        }
+        .absolute_links {
+            position: absolute;
+            top: -4px;
+            right: 15px;
+            display: flex;
+            @include max1024 {
+                display: none;
+            }
+            > a {
+                height: 26px;
+                padding: 0 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: 600;
+                font-size: 14px;
+                background-color: #ff6800;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                transition: 0.26s;
+                &:first-child {
+                    margin-right: 10px;
+                }
+                &:hover, &:focus {
+                    background-color: #ff8a3a;
+                }
+            }
+        }
+    }
+    .left_box {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 50%;
+        @include max1199 {
+            flex-basis: 40%;
+        }
+        @include max1024 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 250px;
+            height: 100%;
+        }
+        @include mobile {
+            width: 200px;
+        }
+        .logo {
+            width: 190px;
+            height: 100%;
+            flex-shrink: 0;
+            background-image: url(../img/logo.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            @include max1024 {
+                width: 100%;
+                background-position: center center;
+                background-size: 35%;
+            }
+        }
+        .pictures {
+            background-image: url(../img/new_header_bg.png);
+            background-repeat: no-repeat;
+            background-position: 70% -10px;
+            background-size: 120%;
+            width: 370px;
+            height: 100%;
+            @include max1199 {
+                width: 320px;
+            }
+            @include max1024 {
+                display: none;
+            }
+        }
+    }
+    .right_box {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 22px;
+        flex-basis: 50%;
+        @include max1199 {
+            flex-basis: 60%;
+        }
+        @include max1024 {
+            flex-basis: 100%;
+            padding-top: 0;
+            padding-left: 30px;
+        }
+        @include mobile {
+            flex-basis: auto;
+        }
+        .contacts_header {
+            flex-basis: 65%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @include max1199 {
+                flex-basis: 55%;
+            }
+            @include max1024 {
+                flex-basis: 50%;
+            }
+            @include tablet-small {
+                display: none;
+            }
+            .phone {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                padding-left: 50px;
+                background-image: url(../img/phone01.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                margin-bottom: 5px;
+                @include max1199 {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+                @include max1024 {
+                    height: 30px;
+                    background-size: 25px;
+                    padding-left: 35px;
+                    margin-bottom: 0;
+                }
+                @include tablet-tiny {
+                    display: none;
+                }
+                > a {
+                    color: #848484;
+                    font-size: 16px;
+                    font-weight: 500;
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+                    > span {
+                        color: #3b3b3b;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .email {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                padding-left: 50px;
+                background-image: url(../img/mail01.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                margin-top: 5px;
+                color: #3b3b3b;
+                font-size: 18px;
+                font-weight: 500;
+                @include max1199 {
+                    font-size: 16px;
+                }
+                @include max1024 {
+                    height: 30px;
+                    background-size: 25px;
+                    padding-left: 35px;
+                    margin-top: 0;
+                }
+                @include tablet-tiny {
+                    display: none;
+                }
+            }
+        }
+        .links_call_write {
+            flex-basis: 35%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @include max1199 {
+                flex-basis: 45%;
+            }
+            @include max1024 {
+                flex-basis: 50%;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            @include tablet-small {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+            }
+            > div, > a {
+                border: 1px solid #e5e5e5;
+                padding: 10px;
+                display: flex;
+                padding-left: 40px;
+                align-items: center;
+                cursor: pointer;
+                @include max1024 {
+                    width: 70px;
+                    height: 100%;
+                    font-size: 0;
+                    border: none;
+                }
+                > span {
+                    padding: 2px 0;
+                    border-bottom: 1px dotted transparent;
+                    transition: 0.26s;
+                    &:hover {
+                        border-bottom: 1px dotted #636571;
+                    }
+                }
+            }
+            .call_you_back {
+                font-size: 13px;
+                color: #636571;
+                position: relative;
+                background-color: #fff;
+                height: 36px;
+                transition: 0.25s;
+                margin-bottom: 10px;
+                @include max1024 {
+                    font-size: 0;
+                    padding: 0;
+                    margin-bottom: 0;
+                    height: 100%;
+                    border-right: 1px solid #eee;
+                    border-left: 1px solid #eee;
+                }
+                @include mobile {
+                    width: 50px;
+                }
+                &:before {
+                    @include pseudo;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 36px;
+                    background-image: url(../img/phone02.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include max1024 {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url(../img/phone02_mobile.png);
+                    }
+                    @include mobile {
+                        background-size: 16px;
+                    }
+                }
+            }
+            .contact_a_specialist {
+                font-size: 13px;
+                color: #636571;
+                background-color: #fff;
+                height: 36px;
+                position: relative;
+                transition: 0.25s;
+                @include max1024 {
+                    font-size: 0;
+                    padding: 0;
+                    height: 100%;
+                }
+                @include mobile {
+                    width: 50px;
+                }
+                &:before {
+                    @include pseudo;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 36px;
+                    background-image: url(../img/mail02.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include max1024 {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url(../img/mail02-mobile.png);
+                    }
+                    @include mobile {
+                        background-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

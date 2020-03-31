@@ -1,0 +1,37 @@
+@import 'base/fonts';
+@import 'base/null';
+
+@import 'theme/colors';
+@import 'utilits/mixins';
+@import 'utilits/classes';
+
+
+//LAYOUT
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/content';
+@import 'layout/footer';
+
+//module
+@import 'modules/typography';
+@import 'modules/forms';
+@import 'modules/breadcrumbs';
+@import 'modules/pagination';
+
+@import 'modules/bxslider';
+@import 'modules/itemNews';
+@import 'modules/itemTeam';
+@import 'modules/popup';
+
+//pages
+@import 'pages/home';
+@import 'pages/news';
+@import 'pages/team';
+@import 'pages/about';
+@import 'pages/contacts';
+@import 'pages/free';
+@import 'pages/registration';
+@import 'pages/services';
+
+// landing pages
+@import 'pages/landingOne';

@@ -1,0 +1,253 @@
+#section-home-menu {
+    background-color: #f4f6f9;
+    padding: 15px 0;
+}
+.home_page_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include mobile {
+        flex-direction: column;
+
+    }
+    .item {
+        flex-basis: 32%;
+        height: 180px;
+        margin-bottom: 25px;
+        transition: 0.26s;
+        position: relative;
+        padding-bottom: 45px;
+        @include mobile {
+            flex-basis: 100%;
+            width: 100%;
+            height: 65px;
+            margin-bottom: 12px;
+            padding-bottom: 0;
+            @include unSelect;
+        }
+        .absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 1px 0 7px rgba(#000, .32);
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: 0.26s;
+            @include mobile {
+                position: relative;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                @include unSelect;
+            }
+        }
+        .ico {
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            width: 100%;
+            height: 120px;
+            @include mobile {
+                display: none;
+            }
+        }
+        &.legal_services     {.ico {background-image: url(../img/legal_services_77.png);}}
+        &.account_services   {.ico {background-image: url(../img/account_services_77.png);}}
+        &.entry_sro          {.ico {background-image: url(../img/entry_sro_77.png);}}
+        &.business_regist    {.ico {background-image: url(../img/business_regist_77.png);}}
+        &.certific_licens    {.ico {background-image: url(../img/certific_licens_77.png);}}
+        &.liquid_bankrup     {.ico {background-image: url(../img/liquid_bankrup_77.png);}}
+
+        .name {
+            color: #2f2f2f;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            @include mobile {
+                color: #32519e;
+                font-size: 16px;
+            }
+        }
+        .dropdown_links {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 20px;
+            .delimiter {
+                width: 65px;
+                height: 1px;
+                background: #ccd4d5;
+                margin: 22px auto;
+                display: block;
+            }
+            > a {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                color: #2f2f2f;
+                font-size: 16px;
+                transition: 0.26s;
+                padding: 7px;
+                cursor: pointer;
+                &:hover, &:focus {
+                    color: #2d62b2;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &:hover, &:focus {
+            z-index: 2;
+            &.legal_services {
+                .ico {
+                    background-position: center -200px;
+                }
+            }
+            &.account_services {
+                .ico {
+                    background-position: center -197px;
+                }
+            }
+            &.entry_sro {
+                .ico {
+                    background-position: center -193px;
+                }
+            }
+            &.business_regist {
+                .ico {
+                    background-position: center -197px;
+                }
+            }
+            &.certific_licens {
+                .ico {
+                    background-position: center -197px;
+                }
+            }
+            &.liquid_bankrup {
+                .ico {
+                    background-position: center -198px;
+                }
+            }
+            .name {
+                color: #275aa8;
+            }
+            .absolute {
+                height: auto;
+                z-index: 2;
+            }
+            .dropdown_links {
+                display: flex;
+            }
+        }
+    }
+}
+
+#about-company {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 4px rgba(#000, .14);
+    .blue_button {
+        @include blueButton;
+        max-width: 250px;
+        margin: 25px auto 0;
+    }
+    .text {
+        @include mobile {
+            text-align: justify;
+            p {
+                font-size: 14px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+#last-news {
+    background-color: #f4f6f9;
+    .wrapper_last_news {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        // This is item news
+        @include tablet-small {
+            flex-direction: column;
+            .item_news {
+                flex-basis: 100%;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 25px;
+                > img {
+                    width: 100%;
+                }
+                .read_more {
+                    margin: 15px auto 20px;
+                }
+            }
+        }
+    }
+    .blue_button {
+        @include blueButton;
+        max-width: 280px;
+        margin: 25px auto 0;
+    }
+}
+
+#our-team {
+    .wrapper_our_team {
+        max-width: 1060px;
+        margin: 40px auto 0;
+        @include max1199 {
+            max-width: 800px;
+        }
+        @include max960 {
+            max-width: 550px;
+        }
+        @include tablet {
+            width: 400px;
+        }
+        @include mobile {
+            max-width: 320px;
+        }
+    }
+    // this is item team
+
+    .owl-stage-outer {
+        z-index: 1;
+    }
+    .owl-nav {
+        position: absolute;
+        @include coverBox;
+        @include mobile {
+            z-index: 1;
+        }
+        > div {
+            width: 41px;
+            height: 41px;
+            position: absolute;
+            top: 25%;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 2px 0 10px rgba(#000, .15);
+            font-size: 0;
+            background-repeat: no-repeat;
+            background-position: center 12px;
+            &:hover, &:focus {
+                background-position: center -38px;
+            }
+        }
+        .owl-prev {
+            left: -65px;
+            background-image: url(../img/prev.png);
+            @include mobile {
+                left: -12px;
+            }
+        }
+        .owl-next {
+            right: -65px;
+            background-image: url(../img/next.png);
+            @include mobile {
+                right: -12px;
+            }
+        }
+    }
+}
